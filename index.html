@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
 <link href="assets/images/gsoc.png" rel="icon" />
-<title>Documentation | Your ThemeForest item Name</title>
+<title>Siyao Li - GSoC2022 MIT App Inventor Application</title>
 <meta name="description" content="Your ThemeForest item Name and description">
 <meta name="author" content="harnishdesign.net">
 
@@ -109,9 +109,9 @@
           <p><b>Phone:</b> 858-280-6286</p>
           <p><b>Email:</b> siyaoli@terpmail.umd.edu</p>
           <p><b>Institution:</b> University of Maryland, College Park</p>
-          <p><b>Resume:</b> <a href="">Link</a></p>
-          <p><b>Github:</b> <a href="">Link</a></p>
-          <p><b>Proposal Link:</b> <a href="">Link</a></p>
+          <p><b>Resume:</b> <a target="_blank" href="https://drive.google.com/file/d/17aa8LHOGku3JRDDhW5BCWlNZ_0mLd-rW/view?usp=sharing">Link</a></p>
+          <p><b>Github:</b> <a target="_blank" href="https://github.com/siyaoL1">Link</a></p>
+          <p><b>Proposal Link:</b> <a target="_blank" href="https://docs.google.com/document/d/1tRz0RyFTDcBKOob6_pkPgNDJ0OIeh9T5OlHgtyPDXis/edit?usp=sharing">Link</a></p>
         </section>		
         
 		<hr class="divider">
@@ -186,7 +186,7 @@
     <section id="app_challenge">
       <h3>Creating a non-trivial app</h3>
       <p>For this challenge I created a drum machine app allow users to play drums on their phone.</p>
-      <p>Here are the downloading links: <a href="">Link to AIA file</a>, <a href="">Link to APK file</a></p>
+      <p>Here are the downloading links: <a target="_blank" href="https://drive.google.com/file/d/1e4jTQA4aJ04nYBQg7YtuwMiZsV1I2IOf/view?usp=sharing">Link to AIA file</a>, <a target="_blank" href="https://drive.google.com/file/d/1EAehJQs2KcFfY175LzKINmL40UEHAGU5/view?usp=sharing">Link to APK file</a></p>
     </section>
 
     <hr class="divider">
@@ -199,6 +199,8 @@
       <p>The issue of ‘useFront’ property stopped working was mentioned in issue #180, and the property was deprecated in PR #335. In the function capturePicture() at components/runtime/Camera.java, the ‘useFront’ property is checked for adding the intent ‘android.intent.extras.LENS_FACING_FRONT’. However, this intent is being removed in Android 5.1 (API level 22).</p>
       <p>Solution of fix:</p>  
       <pre><code class="java">
+        import android.hardware.camera2.CameraCharacteristics;
+
         int frontCamera = CameraCharacteristics.LENS_FACING_FRONT;
         if (useFront) {
           if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP_MR1 && Build.VERSION.SDK_INT < Build.VERSION_CODES.O) {
@@ -228,12 +230,38 @@
           <ul>
             <li>Create a Snapshot class that extends AndroidNonvisibleComponent at <span style="color:red">.appinventor/components/src/com/google/appinventor/components/runtime/</span></li>
             <li>This file is the source code of the component Snapshot, and the Camera API will be used in this file to take picture with camera.</li>
+            <li>Due to the fact that Camera.takePicture() is only valid when preview is alive, we can use a dummy SurfaceView to avoid preview opening up. It can be achieved as follow: </li>
+            <pre><code class="java">
+              public void takePictureNoPreview(Context context){
+                Camera camere = Camera.open();
+                
+                if (camera == null) {
+                  throw new Exception(); 
+                }
+                
+                try{
+                  // camera parameter settings skipped
+                  SurfaceView dummy = new SurfaceView(context)
+                  camera.setPreviewDisplay(dummy.getHolder());    
+                  camera.startPreview(); 
+                  camera.takePicture(null, null, getJpegCallback()):
+                }finally{
+                  camera.close();
+                }      
+              
+              }
+            </code></pre>
           </ul>
         </li>
         <li>Updating Version Numbers
           <ul>
             <li>Create a version number for SNAPSHOT_COMPONENT_VERSION inside <span style="color:red">appinventor/components/src/com/google/appinventor/components/common/</span>
             </li>
+          </ul>
+        </li>
+        <li>Create Documentation
+          <ul>
+            <li>Update the document HTML file in <span style="color:red">/appinventor/docs/reference/components</span></li>
           </ul>
         </li>
       </ol>
