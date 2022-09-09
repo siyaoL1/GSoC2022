@@ -44,8 +44,8 @@ Functional programming is a programming paradigm where programs are constructed 
   
 ### What's Done
 * Debuged and merged 12 functional list operator blocks. (Map, Filter, Reduce, Sort, Sort with key, Sort with comparator, Minimum number, Maximum number, But first, But last, Slices)
-* Implemented dropdown selection for procedures that enables the usage of higher order functions.
-* Created documentation and tutorials of new functional operator blocks for educational purposes. You can view the tutorial here.
+* Implemented dropdown selection for procedures that enables the usage of higher order functions. This part is decided to not merged, but you can find the code in [here](https://github.com/siyaoL1/appinventor-sources/tree/Siyao_GSoC2022_Functional_Blocks_with_Procedure_Selector).
+* Created documentation and tutorials of new functional operator blocks for educational purposes. You can view the tutorial [here]().
   
 ### What left
 * Create Minimum with comparator and Maximum with comparator blocks.
