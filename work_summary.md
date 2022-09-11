@@ -48,11 +48,11 @@ Functional programming is a programming paradigm where programs are constructed 
 * Debuged and merged 11 functional list operator blocks. (Map, Filter, Reduce, Sort, Sort with key, Sort with comparator, Minimum number, Maximum number, But first, But last, Slices)</br>
 <div>
   <p align="center">
-    <img align="center" height="160" src="./img/blocks.png" alt="blocks image">  
+    <img align="center" height="300" src="./img/blocks.png" alt="blocks image">  
   </p>
 </div>
 
-* Implemented dropdown selection for procedures that enables the usage of higher order functions. This part is decided to not merged, but you can find the code in [here](https://github.com/siyaoL1/appinventor-sources/tree/Siyao_GSoC2022_Functional_Blocks_with_Procedure_Selector).
+* Implemented dropdown selection for procedures that enables the usage of higher order functions. The dropdown is able filter to only show procedures with a specific input & output signature. This part is decided to not merged, but you can find the code in [here](https://github.com/siyaoL1/appinventor-sources/tree/Siyao_GSoC2022_Functional_Blocks_with_Procedure_Selector).
 <div>
   <p align="center">
     <img align="center" height="160" src="./img/dropdown_selector.png" alt="app_inventor_logo">
