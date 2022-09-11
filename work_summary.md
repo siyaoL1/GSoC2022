@@ -21,30 +21,32 @@
 - Mark Friedman
 - Lyn Turbak
 
-### Project Abstract
+## Project Abstract
 
 Functional programming is a programming paradigm where programs are constructed by composing pure functions, avoiding shared state, mutable data, and side effects. Many operators in functional programming are commonly used to make code more concise, and less complex. This project hopes to expand the operations in the block editor of MIT App Inventor by implementing new blocks commonly found in functional programming, such as map, reduce, etc.
 
-### [GSoC Project Page](https://summerofcode.withgoogle.com/myprojects/details/HBUJwOG6)
-### [GSoC Project Proposal](https://docs.google.com/document/d/1tRz0RyFTDcBKOob6_pkPgNDJ0OIeh9T5OlHgtyPDXis/edit?usp=sharing)
+## Project Links
+- #### [GSoC Project Proposal](https://docs.google.com/document/d/1tRz0RyFTDcBKOob6_pkPgNDJ0OIeh9T5OlHgtyPDXis/edit?usp=sharing)
 
-### GitHub Organization Repo
-[MIT App Inventor](https://github.com/mit-cml/appinventor-sources) 
+- #### [GSoC Project Page](https://summerofcode.withgoogle.com/myprojects/details/HBUJwOG6)
 
-### GitHub Forked Repo
-[MIT App Inventor](https://github.com/siyaoL1/appinventor-sources)
+- #### PRs Merged
+  [Non-destructive Functional List Operator Blocks](https://github.com/mit-cml/appinventor-sources/pull/2699) <br>
 
-### PRs Merged
-[Non-destructive Functional List Operator Blocks](https://github.com/mit-cml/appinventor-sources/pull/2699) <br>
+- #### PRs Yet to be Merged
+  [Destructive Functional List Operator Blocks](https://github.com/mit-cml/appinventor-sources/pull/2711) <br>
+  
+- #### GitHub Organization Repo
+  [MIT App Inventor](https://github.com/mit-cml/appinventor-sources) 
 
-### PRs Yet to be Merged
-[Destructive Functional List Operator Blocks](https://github.com/mit-cml/appinventor-sources/pull/2711) <br>
+- #### GitHub Forked Repo
+  [MIT App Inventor](https://github.com/siyaoL1/appinventor-sources)
 
 ## Work Summary
   
 ### What's Done
 * Debuged and merged 12 functional list operator blocks. (Map, Filter, Reduce, Sort, Sort with key, Sort with comparator, Minimum number, Maximum number, But first, But last, Slices)
-* Implemented dropdown selection for procedures that enables the usage of higher order functions. This part is decided to not merged, but you can find the code in [here](https://github.com/siyaoL1/appinventor-sources/tree/Siyao_GSoC2022_Functional_Blocks_with_Procedure_Selector).
+* Implemented dropdown selection for procedures that enables the usage of higher order functions. This part is decided to not merged, but you can find the code [here](https://github.com/siyaoL1/appinventor-sources/tree/Siyao_GSoC2022_Functional_Blocks_with_Procedure_Selector).
 * Created documentation and tutorials of new functional operator blocks for educational purposes. You can view the tutorial [here]().
   
 ### What left
